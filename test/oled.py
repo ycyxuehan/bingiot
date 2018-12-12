@@ -6,8 +6,8 @@ from PIL import ImageDraw
 from PIL import ImageFont
 
 # 引脚配置，按照上面的接线来配置
-RST=5
-DC=6
+RST=27
+DC=22
 # 因为连的是CE0，这里的PORT和DEVICE也设置为0
 SPI_PORT=0
 SPI_DEVICE=0
