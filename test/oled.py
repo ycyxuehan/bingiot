@@ -6,8 +6,8 @@ from PIL import ImageDraw
 from PIL import ImageFont
 
 # 引脚配置，按照上面的接线来配置
-RST=17
-DC=22
+RST=5
+DC=6
 # 因为连的是CE0，这里的PORT和DEVICE也设置为0
 SPI_PORT=0
 SPI_DEVICE=0
@@ -38,7 +38,7 @@ draw1.ellipse((left+10,top+10,left+10+shape_width,top+10+shape_width),outline=1,
 draw1.polygon([(right-20,top+10),(width/2+5,bottom-10),(right-5,bottom-10)],outline=1,fill=0) #画三角
 
 # image 2，载入一副图片
-image2=Image.open('testImage.jpg').resize((128,64)).convert('1')
+image2=Image.open('ironman.jpeg').resize((128,64)).convert('1')
 
 # image 3，显示一些文字
 image3=Image.new('1',(width,height))
