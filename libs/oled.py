@@ -32,7 +32,7 @@ class OLED12864(object):
         draw = ImageDraw.Draw(img)
         lines = int(len(text)/font_count) + 1
         for i in range(0, lines):
-            draw.text((0, i*font_size), text[i*font_count, (i+1)*font_count], imageFont, fill=1)
+            draw.text((0, i*font_size), text[i*font_count:(i+1)*font_count], font=imageFont, fill=1)
         self.__display.image(img)
         self.display()
 
