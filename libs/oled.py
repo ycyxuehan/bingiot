@@ -28,7 +28,7 @@ class OLED12864(object):
         if font != '':
             imageFont = ImageFont.truetype(font, font_size)
         font_count = int(128/font_size)
-        img = Image.new('1', self.width, self.height)
+        img = Image.new('1', (self.width, self.height))
         draw = ImageDraw.Draw(img)
         lines = int(len(text)/font_count) + 1
         for i in range(0, lines):
