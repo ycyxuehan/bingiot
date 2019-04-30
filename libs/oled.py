@@ -27,6 +27,7 @@ class OLED12864(object):
         imageFont = ImageFont.load_default()
         if font != '':
             imageFont = ImageFont.truetype(font, font_size)
+        imageFont.size = font_size
         font_count = int(128/font_size)
         img = Image.new('1', (self.width, self.height))
         draw = ImageDraw.Draw(img)
